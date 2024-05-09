@@ -1,8 +1,15 @@
 import React from "react"
+import "./styles.css"
 //import { Player } from "./components/player"
 import { Board } from "./components/board"
 import { Home } from "./components/home"
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom"
+import { Interview } from "./components/interview"
+import {
+  BrowserRouter as Router,
+  Route,
+  /*Link,*/ Routes,
+} from "react-router-dom"
+import { Link } from "react-scroll"
 
 function App() {
   return (
@@ -19,32 +26,55 @@ function App() {
         Derek Maxin
       </div>
       <Router>
-        <div>
-          <nav
-            style={{
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            <ul
+        <div className="App">
+          <header className="nav">
+            <nav
+              className="nav__container__actions"
               style={{
                 display: "flex",
-                listStyle: "none",
-                padding: 0,
+                justifyContent: "center",
               }}
             >
-              <li style={{ margin: "0 10px" }}>
-                <Link to="/">Home</Link>
-              </li>
-              <li style={{ margin: "0 10px" }}>
-                <Link to="/board">Board</Link>
-              </li>
-            </ul>
-          </nav>
-          <Routes>
-            <Route path="/" exact element={<Home />} />
-            <Route path="/board" element={<Board />} />
-          </Routes>
+              <ul>
+                <Link
+                  activeClass="active"
+                  smooth
+                  spy
+                  to="home"
+                  style={{ margin: "0 10px" }}
+                >
+                  Home
+                </Link>
+                <Link
+                  activeClass="active"
+                  smooth
+                  spy
+                  to="board"
+                  style={{ margin: "0 10px" }}
+                >
+                  Board
+                </Link>
+                <Link
+                  activeClass="active"
+                  smooth
+                  spy
+                  to="interview"
+                  style={{ margin: "0 10px" }}
+                >
+                  Interview
+                </Link>
+              </ul>
+            </nav>
+          </header>
+          <section id="home">
+            <Home />
+          </section>
+          <section id="board">
+            <Board />
+          </section>
+          <section id="interview">
+            <Interview />
+          </section>
         </div>
       </Router>
     </>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 
-export const Player = () => {
+export const Interview = () => {
   const [count, setCount] = useState(0)
   const [isEven, setIsEven] = useState(true)
 
@@ -15,7 +15,7 @@ export const Player = () => {
 
   return (
     <StyledDiv>
-      <p>Hello BitComplete!</p>
+      <p>Hello Interviewers!</p>
       <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
         <button onClick={() => setCount(count + 1)}>Click</button>
         <p>{count}</p>
@@ -25,7 +25,7 @@ export const Player = () => {
   )
 }
 
-const StyledDiv = styled.div`
+const StyledDiv = styled.div`Direction:
   padding: 20px;
   display: flex;
   align-items: center;
