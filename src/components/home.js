@@ -1,10 +1,11 @@
 import React from "react"
 import myImg from "./../images/myself.jpg"
+import { Bird } from "../components/linkArt"
 
 export const Home = () => {
   return (
     <>
-      <p style={{ margin: "15px" }}>Welcome to my website! I'm Derek</p>
+      <p style={{ marginTop: "80px" }}>Welcome to my website! I'm Derek</p>
       <p style={{ margin: "15px" }}>
         I am a 4th year Bachelor of Computer Science student at the University
         of Waterloo. My interests include game dev, creating visually appealing
@@ -15,6 +16,7 @@ export const Home = () => {
         music, and enjoy taking care of animals.
       </p>
       <div>
+        <Bird />
         <img style={{ width: "400px" }} src={myImg} alt="cows" />
       </div>
     </>

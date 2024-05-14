@@ -6,28 +6,29 @@ import { Home } from "./components/home"
 import { Interview } from "./components/interview"
 import {
   BrowserRouter as Router,
-  Route,
-  /*Link,*/ Routes,
+  //Route,
+  ///*Link,*/ Routes,
 } from "react-router-dom"
 import { Link } from "react-scroll"
 
 function App() {
   return (
     <>
-      <div
-        style={{
-          fontWeight: "bold",
-          justifyContent: "center",
-          display: "flex",
-          padding: "20px",
-          fontSize: "x-large",
-        }}
-      >
-        Derek Maxin
-      </div>
       <Router>
         <div className="App">
           <header className="nav">
+            <div
+              style={{
+                fontWeight: "bold",
+                //justifyContent: "center",
+                display: "flex",
+                position: "fixed",
+                //padding: "20px",
+                //fontSize: "x-large",
+              }}
+            >
+              Derek Maxin
+            </div>
             <nav
               className="nav__container__actions"
               style={{
