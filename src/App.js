@@ -53,7 +53,7 @@ function App() {
                   to="board"
                   style={{ margin: "0 10px" }}
                 >
-                  Board
+                  About Me
                 </Link>
                 <Link
                   activeClass="active"
@@ -62,7 +62,7 @@ function App() {
                   to="interview"
                   style={{ margin: "0 10px" }}
                 >
-                  Interview
+                  Projects
                 </Link>
               </ul>
             </nav>
