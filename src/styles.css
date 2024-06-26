@@ -111,13 +111,7 @@ li:hover {
 
 .cloud {
   position: absolute;
-  background: white;
-  border-radius: 50px;
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
-  width: 200px;
-  height: 60px;
-  opacity: 0.8;
-  animation: float 20s linear infinite;
+  animation: float linear infinite;
 }
 
 @keyframes float {
@@ -125,6 +119,6 @@ li:hover {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(100vw);
+    transform: translateX(115vw);
   }
 }
