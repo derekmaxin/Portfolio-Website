@@ -2,6 +2,7 @@ import React from "react"
 import "./styles.css"
 //import { Player } from "./components/player"
 import { Board } from "./components/board"
+import { Tech } from "./components/tech"
 import { Home } from "./components/home"
 import { Interview } from "./components/interview"
 import {
@@ -72,6 +73,9 @@ function App() {
           </section>
           <section id="board">
             <Board />
+          </section>
+          <section id="tech">
+            <Tech />
           </section>
           <section id="interview">
             <Interview />

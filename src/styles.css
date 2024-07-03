@@ -16,9 +16,11 @@ section {
   background: #0a192f;
 }
 
-#board,
+#board {
+  background: #0e3269;
+}
+
 #interview {
-  color: #3b3b3c;
   background: #0a192f;
 }
 
