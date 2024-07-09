@@ -41,7 +41,11 @@ const Container = styled.div`
   border-radius: 10px;
   border-width: 30px;
   border-style: solid;
-  border-image-source: ${treeBranch};
+  border-image-source: repeating-linear-gradient(
+    45deg,
+    transparent,
+    #64ffda 20px
+  );
   border-image-slice: 30;
   border-image-width: 1;
   border-image-outset: 0;

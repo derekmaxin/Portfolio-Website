@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 import "./styles.css"
 //import { Player } from "./components/player"
 import { Board } from "./components/board"

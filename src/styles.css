@@ -6,13 +6,14 @@
 section {
   display: grid;
   place-items: center;
-  height: 100vh;
+  min-height: 100vh;
   font-size: 20px;
   /*font-weight: bold;*/
 }
 
 #home {
   margin-top: -80px;
+  height: 100vh;
   background: #0a192f;
 }
 
@@ -20,8 +21,12 @@ section {
   background: #0e3269;
 }
 
+#tech {
+  background: #1955ad;
+}
+
 #interview {
-  background: #0a192f;
+  background: #5e99f0;
 }
 
 .nav {

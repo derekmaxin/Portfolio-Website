@@ -26,7 +26,7 @@ import KubernetesLogo from "./../images/techLogos/Kubernetes.png"
 export const Tech = () => {
   return (
     <Container>
-      <Title>Languages and Tech</Title>
+      <Title>Languages & Tech</Title>
 
       <ImageRow>
         <ImageContainer>
@@ -116,31 +116,13 @@ export const Tech = () => {
 }
 
 const Container = styled.div`
-  text-align: left;
+  text-align: center;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px;
   font-family: "Arial", sans-serif;
-  background-color: #0e3269;
+  background-color: #1955ad;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-`
-
-const Content = styled.div`
-  display: flex;
-  align-items: flex-start;
-  margin-top: 20px;
-`
-
-const TextContainer = styled.div`
-  flex: 1;
-  margin-right: 20px;
-`
-
-const Description = styled.p`
-  color: #a8b2d1;
-  font-size: 18px;
-  margin: 20px 0;
 `
 
 const Title = styled.h1`
@@ -149,24 +131,11 @@ const Title = styled.h1`
   margin: 10px 0;
 `
 
-const Name = styled.h1`
-  color: #e6f1ff;
-  font-size: 48px;
-  margin: 10px 0;
-`
-
-const Image = styled.img`
-  width: 200px;
-  height: auto;
-  border-radius: 10px;
-`
-
 const ImageRow = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-top: 20px;
-  max-height: 130px;
+  justify-content: center;
+  margin-top: 60px;
   gap: 20px;
 `
 
@@ -199,7 +168,7 @@ const ImageContainer = styled.div`
 `
 
 const SmallImage = styled.img`
-  width: 80px;
+  width: 70px;
   height: auto;
   margin-bottom: 5px;
   padding: 10px;
@@ -210,7 +179,4 @@ const Caption = styled.p`
   font-size: 14px;
   margin: 0;
   font-weight: bold;
-`
-const ImageRowContainer = styled.div`
-  display: flex;
 `
