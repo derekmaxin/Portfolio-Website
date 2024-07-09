@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import { Reversi } from "../components/projects/reversi"
 
 export const Interview = () => {
   const settings = {
@@ -11,17 +12,6 @@ export const Interview = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-    ],
   }
 
   return (
@@ -30,8 +20,7 @@ export const Interview = () => {
       <Container>
         <StyledSlider {...settings}>
           <Slide>
-            <h2>Project 1</h2>
-            <p>Description of project 1.</p>
+            <Reversi />
           </Slide>
           <Slide>
             <h2>Project 2</h2>
@@ -72,10 +61,10 @@ const Title = styled.h1`
 `
 
 const StyledSlider = styled(Slider)`
-  width: 80vw;
+  width: 85vw;
   height: 60vh;
   .slick-list {
-    padding: 0 20px;
+    padding: 0 0px;
   }
 
   .slick-slide {
@@ -95,17 +84,19 @@ const StyledSlider = styled(Slider)`
 `
 
 const Slide = styled.div`
-  display: flex !important;
-  flex-direction: column;
-  align-items: center;
+  height: 56vh;
+  width: 80vw !important;
+  display: flex;
   justify-content: center;
-  height: 500px;
+  align-items: center;
+  overflow: auto;
+
   color: white;
   font-size: 24px;
   background-color: #0d3b66;
   border: 2px solid #64ffda;
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
   margin: 10px;
   text-align: center;
