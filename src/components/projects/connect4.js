@@ -1,24 +1,20 @@
 import React from "react"
 import styled from "styled-components"
-import endScreen from "./../../images/projectImages/Reversi/End.png"
-import intermediateScreen from "./../../images/projectImages/Reversi/Intermediate.png"
-import loginScreen from "./../../images/projectImages/Reversi/Login.png"
+import Game from "./../../images/projectImages/Connect4/Game.PNG"
 
-export const Reversi = () => {
+export const Connect4 = () => {
   return (
     <AppContainer>
       <ImagesContainer>
         <DescriptionContainer>
-          <Title>Reversi</Title>
+          <Title>Connect 4</Title>
           <Description>
-            I recreated the popular 2-player game known as Reversi for Android!
-            Previously published to Google Play ~ no longer maintained. Key
-            tech: Java, XML, Android Studio, design patterns.
+            I recreated the popular 2-player game known as Connect 4! This app
+            includes slide and drop animations. Key tech: Kotlin, JavaFX,
+            IntelliJ.
           </Description>
         </DescriptionContainer>
-        <ResponsiveImage src={loginScreen} alt="Login" />
-        <ResponsiveImage src={intermediateScreen} alt="Intermediate" />
-        <ResponsiveImage src={endScreen} alt="End" />
+        <ResponsiveImage src={Game} alt="Connect 4" />
       </ImagesContainer>
     </AppContainer>
   )
@@ -38,8 +34,8 @@ const ImagesContainer = styled.div`
 
 const ResponsiveImage = styled.img`
   width: 100%;
-  max-width: 360px;
   height: 50vh;
+  max-height: 100%
 
   margin-left: 10px;
   margin-right: 10px;
@@ -49,8 +45,9 @@ const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 140%;
+  width: 100%;
   height: 50vh;
+  max-width: 500px;
 
   margin-left: 10px;
   margin-right: 10px;
@@ -70,7 +67,6 @@ const Title = styled.h1`
 
 const Description = styled.p`
   width: 100%;
-
   height: 48vh;
 
   margin-left: 10px;
@@ -86,4 +82,4 @@ const Description = styled.p`
   }
 `
 
-export default Reversi
+export default Connect4

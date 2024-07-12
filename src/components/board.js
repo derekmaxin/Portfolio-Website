@@ -1,38 +1,109 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import styled from "styled-components"
 import self from "./../images/mount douglas.jpg"
 import treeBranch from "./../images/bark texture.png"
 
 export const Board = () => {
+  const canvasRef = useRef(null)
+
+  useEffect(() => {
+    const canvas = canvasRef.current
+    const ctx = canvas.getContext("2d")
+    const particles = []
+
+    const addParticle = (x, y) => {
+      particles.push({
+        x,
+        y,
+        size: Math.random() * 15 + 1,
+        speedX: Math.random() * 3 - 1.5,
+        speedY: Math.random() * 3 - 1.5,
+        angle: Math.floor(Math.random() * 360),
+        color: "#64ffda",
+      })
+    }
+
+    const updateParticles = () => {
+      particles.forEach((p, index) => {
+        if (p.size <= 0) {
+          particles.splice(index, 1)
+        } else {
+          p.x += p.speedX
+          p.y += p.speedY
+          p.angle += 5
+          p.size -= 0.1
+        }
+      })
+    }
+
+    const drawParticles = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      particles.forEach((p) => {
+        ctx.save()
+        ctx.translate(p.x, p.y)
+        ctx.rotate((p.angle * Math.PI) / 180)
+        ctx.fillStyle = p.color
+        ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size)
+        ctx.restore()
+      })
+    }
+
+    const animateParticles = () => {
+      requestAnimationFrame(animateParticles)
+      addParticle(canvas.width / 2, canvas.height / 2)
+      updateParticles()
+      drawParticles()
+    }
+
+    canvas.width = 300
+    canvas.height = 500
+    animateParticles()
+
+    return () => cancelAnimationFrame(animateParticles)
+  }, [])
+
   return (
-    <Container>
-      <Title>About Me</Title>
-      <Content>
-        <TextContainer>
-          <Greeting>
-            <Name className="hand-wave">👋</Name>
-            <Name>Hello,</Name>
-          </Greeting>
-          <Description>
-            I am a 4th year Bachelor of Computer Science student at the
-            University of Waterloo. My interests include game dev, creating
-            visually appealing websites, and building fun mobile apps.
-          </Description>
-          <Description>
-            I also enjoy playing table tennis and badminton, am an avid fan of
-            music, and enjoy taking care of animals.
-          </Description>
-        </TextContainer>
-        <ImageWrapper>
-          <StyledImage src={self} alt="self" />
-          <Caption>Hiking Mount Douglas</Caption>
-        </ImageWrapper>
-      </Content>
-    </Container>
+    <CanvasContainer>
+      <Container>
+        <Title>About Me</Title>
+        <Content>
+          <TextContainer>
+            <Greeting>
+              <Name className="hand-wave">👋</Name>
+              <Name>Hello,</Name>
+            </Greeting>
+            <Description>
+              I am a 4th year Bachelor of Computer Science student at the
+              University of Waterloo. My interests include game dev, building
+              fun apps, and creating websites.
+            </Description>
+            <Description>
+              I also enjoy playing table tennis and badminton, am an avid fan of
+              music, and enjoy taking care of animals.
+            </Description>
+          </TextContainer>
+          <ImageWrapper>
+            <StyledImage src={self} alt="self" />
+            <Caption>Hiking Mount Douglas</Caption>
+          </ImageWrapper>
+        </Content>
+      </Container>
+
+      <canvas
+        ref={canvasRef}
+        style={{
+          position: "absolute",
+          zIndex: 0,
+          width: "1200px",
+          height: "1200px",
+        }}
+      />
+    </CanvasContainer>
   )
 }
 
 const Container = styled.div`
+  z-index: 1;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -136,6 +207,12 @@ const Caption = styled.div`
   transition: opacity 0.3s ease-in-out;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+`
+
+const CanvasContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 export default Board

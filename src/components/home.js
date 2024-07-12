@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react"
 import styled from "styled-components"
+import { Link as ScrollLink } from "react-scroll"
 import myImg from "./../images/myself.jpg"
 import { Bird } from "../components/linkArt"
 import StarrySky from "./starrySky"
@@ -69,10 +70,17 @@ export const Home = () => {
       <Intro>Welcome to my portfolio! My name is</Intro>
       <Name>Derek Maxin</Name>
       <Tagline>Software developer and architect</Tagline>
-      <div>
-        <Button href="">About me</Button>
-        <Button href="">Projects</Button>
-      </div>
+      <ButtonContainer>
+        <ScrollLink to="board" smooth={true} duration={1000}>
+          <Button>About Me</Button>
+        </ScrollLink>
+        <ScrollLink to="tech" smooth={true} duration={1000}>
+          <Button>Tech</Button>
+        </ScrollLink>
+        <ScrollLink to="interview" smooth={true} duration={1000}>
+          <Button>Projects</Button>
+        </ScrollLink>
+      </ButtonContainer>
 
       <Cloud
         src={cloud1}
@@ -127,6 +135,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  overflow-x: hidden;
 `
 
 const Intro = styled.p`
@@ -146,13 +156,10 @@ const Tagline = styled.h2`
   margin: 10px 0;
 `
 
-const Description = styled.p`
-  color: #8892b0;
-  font-size: 18px;
-  margin: 20px 0;
+const ButtonContainer = styled.div`
+  display: flex;
+  gap: 10px;
 `
-
-const ButtonContainer = styled.div``
 
 const Button = styled.a`
   display: inline-block;
@@ -163,6 +170,7 @@ const Button = styled.a`
   border-radius: 4px;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     background-color: rgba(100, 255, 218, 0.1);

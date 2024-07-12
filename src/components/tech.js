@@ -27,7 +27,10 @@ export const Tech = () => {
   return (
     <Container>
       <Title>Languages & Tech</Title>
-
+      <Description style={{ color: "white" }}>
+        You may find me using these frequently. I'm always looking for the next
+        cool tech to learn!
+      </Description>
       <ImageRow>
         <ImageContainer>
           <SmallImage src={reactLogo} alt="React" />
@@ -179,4 +182,16 @@ const Caption = styled.p`
   font-size: 14px;
   margin: 0;
   font-weight: bold;
+`
+
+const Description = styled.p`
+  margin-left: 10px;
+  margin-right: 10px;
+
+  color: #64ffda;
+  font-size: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `

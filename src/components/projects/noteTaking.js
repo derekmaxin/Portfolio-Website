@@ -1,24 +1,21 @@
 import React from "react"
 import styled from "styled-components"
-import endScreen from "./../../images/projectImages/Reversi/End.png"
-import intermediateScreen from "./../../images/projectImages/Reversi/Intermediate.png"
-import loginScreen from "./../../images/projectImages/Reversi/Login.png"
+import Grid from "./../../images/projectImages/NoteTaking/Grid.PNG"
+import List from "./../../images/projectImages/NoteTaking/List.PNG"
 
-export const Reversi = () => {
+export const NoteTaking = () => {
   return (
     <AppContainer>
       <ImagesContainer>
         <DescriptionContainer>
-          <Title>Reversi</Title>
+          <Title>Note Taking</Title>
           <Description>
-            I recreated the popular 2-player game known as Reversi for Android!
-            Previously published to Google Play ~ no longer maintained. Key
-            tech: Java, XML, Android Studio, design patterns.
+            A custom built, simple note taking app. Key tech: Kotlin, JavaFX,
+            IntelliJ.
           </Description>
         </DescriptionContainer>
-        <ResponsiveImage src={loginScreen} alt="Login" />
-        <ResponsiveImage src={intermediateScreen} alt="Intermediate" />
-        <ResponsiveImage src={endScreen} alt="End" />
+        <ResponsiveImage src={List} alt="List" />
+        <ResponsiveImage src={Grid} alt="Grid" />
       </ImagesContainer>
     </AppContainer>
   )
@@ -38,8 +35,9 @@ const ImagesContainer = styled.div`
 
 const ResponsiveImage = styled.img`
   width: 100%;
-  max-width: 360px;
-  height: 50vh;
+  max-width: 550px;
+  height: 100%;
+  max-height: 50vh;
 
   margin-left: 10px;
   margin-right: 10px;
@@ -49,7 +47,7 @@ const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 140%;
+  width: 120%;
   height: 50vh;
 
   margin-left: 10px;
@@ -86,4 +84,4 @@ const Description = styled.p`
   }
 `
 
-export default Reversi
+export default NoteTaking

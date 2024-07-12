@@ -1,9 +1,14 @@
 import React from "react"
 import styled from "styled-components"
+import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import { Reversi } from "../components/projects/reversi"
+import { AceInterviewer } from "../components/projects/aceInterviewer"
+import { Graphing } from "../components/projects/graphing"
+import { Connect4 } from "../components/projects/connect4"
+import { NoteTaking } from "../components/projects/noteTaking"
 
 export const Interview = () => {
   const settings = {
@@ -17,18 +22,89 @@ export const Interview = () => {
   return (
     <OuterContainer>
       <Title>Projects</Title>
+      <Description style={{ color: "white" }}>
+        All projects presented here are personal and have public source code on
+        my{" "}
+        <Link
+          href="https://github.com/derekmaxin"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          github
+        </Link>
+        . To learn about my professional experience please request my resume at{" "}
+        <Link
+          href="mailto:dmaxin@uwaterloo.ca"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          dmaxin@uwaterloo.ca
+        </Link>{" "}
+        or check out my{" "}
+        <Link
+          href="https://www.linkedin.com/in/derekmaxin"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </Link>
+        .
+      </Description>
+
       <Container>
         <StyledSlider {...settings}>
+          <Slide>
+            <AceInterviewer />
+          </Slide>
+          <Slide>
+            <Graphing />
+          </Slide>
           <Slide>
             <Reversi />
           </Slide>
           <Slide>
-            <h2>Project 2</h2>
-            <p>Description of project 2.</p>
+            <NoteTaking />
           </Slide>
           <Slide>
-            <h2>Project 3</h2>
-            <p>Description of project 3.</p>
+            <Connect4 />
+          </Slide>
+          <Slide>
+            <DescriptionContainer>
+              <Title>Portfolio Website</Title>
+              <Description>
+                This website was build from scratch with React, HTML, and CSS.
+                Thank you for taking the time to explore my projects. If you've
+                made it this far, please consider reaching out to me for a chat,
+                it would be great to get to know you!
+              </Description>
+              <IconRow>
+                <IconButton
+                  href="https://github.com/derekmaxin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  color="#181717"
+                  hoverColor="#3b3b3b"
+                >
+                  <FaGithub />
+                </IconButton>
+                <IconButton
+                  href="mailto:dmaxin@uwaterloo.ca"
+                  color="#d10000"
+                  hoverColor="#d63a3a"
+                >
+                  <FaEnvelope />
+                </IconButton>
+                <IconButton
+                  href="https://www.linkedin.com/in/derekmaxin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  color="#0A66C2"
+                  hoverColor="#2f7dcc"
+                >
+                  <FaLinkedin />
+                </IconButton>
+              </IconRow>
+            </DescriptionContainer>
           </Slide>
         </StyledSlider>
       </Container>
@@ -45,6 +121,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 10px;
 `
 
 const OuterContainer = styled.div`
@@ -100,4 +177,49 @@ const Slide = styled.div`
   box-sizing: border-box;
   margin: 10px;
   text-align: center;
+`
+const Description = styled.p`
+  margin-left: 10px;
+  margin-right: 10px;
+
+  color: #64ffda;
+  font-size: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+`
+
+const DescriptionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  height: 50vh;
+  padding: 5px;
+
+  margin-left: 10px;
+  margin-right: 10px;
+`
+
+const IconRow = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+const IconButton = styled.a`
+  margin: 0 10px;
+  color: ${(props) => props.color || "black"};
+  font-size: 100px;
+  transition: color 0.3s;
+
+  &:hover {
+    color: ${(props) => props.hoverColor || "black"};
+  }
+`
+
+const Link = styled.a`
+  color: white;
+  text-decoration: underline;
 `

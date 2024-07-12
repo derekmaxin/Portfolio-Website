@@ -1,24 +1,23 @@
 import React from "react"
 import styled from "styled-components"
-import endScreen from "./../../images/projectImages/Reversi/End.png"
-import intermediateScreen from "./../../images/projectImages/Reversi/Intermediate.png"
-import loginScreen from "./../../images/projectImages/Reversi/Login.png"
+import barGraph from "./../../images/projectImages/Graphing/Bar.PNG"
+import lineGraph from "./../../images/projectImages/Graphing/Line.PNG"
+import pieGraph from "./../../images/projectImages/Graphing/Pie.PNG"
 
-export const Reversi = () => {
+export const Graphing = () => {
   return (
     <AppContainer>
       <ImagesContainer>
         <DescriptionContainer>
-          <Title>Reversi</Title>
+          <Title>Graphing Calculator</Title>
           <Description>
-            I recreated the popular 2-player game known as Reversi for Android!
-            Previously published to Google Play ~ no longer maintained. Key
-            tech: Java, XML, Android Studio, design patterns.
+            A custom built, fully cuztomizable graphing calculator. Key tech:
+            Kotlin, JavaFX, IntelliJ.
           </Description>
         </DescriptionContainer>
-        <ResponsiveImage src={loginScreen} alt="Login" />
-        <ResponsiveImage src={intermediateScreen} alt="Intermediate" />
-        <ResponsiveImage src={endScreen} alt="End" />
+        <ResponsiveImageWide src={lineGraph} alt="Line graph" />
+        <ResponsiveImage src={barGraph} alt="Bar graph" />
+        <ResponsiveImage src={pieGraph} alt="Pie graph" />
       </ImagesContainer>
     </AppContainer>
   )
@@ -38,8 +37,19 @@ const ImagesContainer = styled.div`
 
 const ResponsiveImage = styled.img`
   width: 100%;
-  max-width: 360px;
-  height: 50vh;
+  max-width: 320px;
+  height: 100%;
+  max-height: 50vh;
+
+  margin-left: 10px;
+  margin-right: 10px;
+`
+
+const ResponsiveImageWide = styled.img`
+  width: 120%;
+  max-width: 500px;
+  height: 100%;
+  max-height: 50vh;
 
   margin-left: 10px;
   margin-right: 10px;
@@ -49,7 +59,7 @@ const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 140%;
+  width: 120%;
   height: 50vh;
 
   margin-left: 10px;
@@ -86,4 +96,4 @@ const Description = styled.p`
   }
 `
 
-export default Reversi
+export default Graphing

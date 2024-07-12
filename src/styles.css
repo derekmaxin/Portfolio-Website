@@ -3,6 +3,10 @@
   text-align: center;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 section {
   display: grid;
   place-items: center;
