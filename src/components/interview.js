@@ -4,6 +4,7 @@ import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import { YummyPiRecipes } from "../components/projects/yummyPiRecipes"
 import { Reversi } from "../components/projects/reversi"
 import { AceInterviewer } from "../components/projects/aceInterviewer"
 import { Graphing } from "../components/projects/graphing"
@@ -23,8 +24,8 @@ export const Interview = () => {
     <OuterContainer>
       <Title>Projects</Title>
       <Description style={{ color: "white" }}>
-        All projects presented here are personal and have public source code on
-        my{" "}
+        All projects presented here are personal and most have public source
+        code on my{" "}
         <Link
           href="https://github.com/derekmaxin"
           target="_blank"
@@ -32,7 +33,7 @@ export const Interview = () => {
         >
           github
         </Link>
-        . To learn about my professional experience please request my resume at{" "}
+        . For my professional experience please request my resume at{" "}
         <Link
           href="mailto:dmaxin@uwaterloo.ca"
           target="_blank"
@@ -55,6 +56,9 @@ export const Interview = () => {
         <StyledSlider {...settings}>
           <Slide>
             <AceInterviewer />
+          </Slide>
+          <Slide>
+            <YummyPiRecipes />
           </Slide>
           <Slide>
             <Graphing />

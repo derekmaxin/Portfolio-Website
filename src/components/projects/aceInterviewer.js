@@ -94,7 +94,7 @@ const Description = styled.p`
   margin-right: 10px;
 
   color: #64ffda;
-  font-size: 18px;
+  font-size: 20px;
   align-items: center;
 
   @media (max-width: 768px) {
