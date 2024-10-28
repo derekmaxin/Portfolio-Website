@@ -1,35 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6f9d23b4d9e76c840e2268a1c4ffcb92",
+    "revision": "e538f689a3898d11bb76a162e1b80275",
     "url": "/Portfolio-Website/index.html"
   },
   {
-    "revision": "68575795ebe80728e7e8",
+    "revision": "c2bac3f255d56394d6e5",
     "url": "/Portfolio-Website/static/css/2.3e6e03c3.chunk.css"
   },
   {
-    "revision": "bef0df3e97638f0ebdf8",
-    "url": "/Portfolio-Website/static/css/main.75c9a26f.chunk.css"
+    "revision": "71e389d2a22e1024e8f6",
+    "url": "/Portfolio-Website/static/css/main.1290d9cb.chunk.css"
   },
   {
-    "revision": "68575795ebe80728e7e8",
-    "url": "/Portfolio-Website/static/js/2.25a6546d.chunk.js"
+    "revision": "c2bac3f255d56394d6e5",
+    "url": "/Portfolio-Website/static/js/2.1faab33e.chunk.js"
   },
   {
     "revision": "cf46fa9c8064673a485fe95feff73812",
-    "url": "/Portfolio-Website/static/js/2.25a6546d.chunk.js.LICENSE.txt"
+    "url": "/Portfolio-Website/static/js/2.1faab33e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d2a9e9dd2d26fc3ceaf0",
-    "url": "/Portfolio-Website/static/js/3.6cd3267f.chunk.js"
+    "revision": "a1d75b41a108075bae79",
+    "url": "/Portfolio-Website/static/js/3.c9c992cf.chunk.js"
   },
   {
-    "revision": "bef0df3e97638f0ebdf8",
-    "url": "/Portfolio-Website/static/js/main.859826b9.chunk.js"
+    "revision": "71e389d2a22e1024e8f6",
+    "url": "/Portfolio-Website/static/js/main.a865bb1e.chunk.js"
   },
   {
-    "revision": "dd283f72b682bdd4a8f9",
-    "url": "/Portfolio-Website/static/js/runtime-main.bcd6c804.js"
+    "revision": "af157ba244fec21b4eaa",
+    "url": "/Portfolio-Website/static/js/runtime-main.375b0784.js"
   },
   {
     "revision": "a7e580cb3bd89c20500fce34a3b63e56",
@@ -164,12 +164,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portfolio-Website/static/media/cloud4.e2f62777.png"
   },
   {
+    "revision": "edf4e8eaa17aa5610103602d3cd2d7e0",
+    "url": "/Portfolio-Website/static/media/create.edf4e8ea.png"
+  },
+  {
+    "revision": "de55c10ec9b02381dd4bf1bae444c2a3",
+    "url": "/Portfolio-Website/static/media/details.de55c10e.png"
+  },
+  {
+    "revision": "aeea9f1c494d1a6a9b7606d7efa92b72",
+    "url": "/Portfolio-Website/static/media/home.aeea9f1c.png"
+  },
+  {
     "revision": "5ef7bbd1bfeff400feb2df2661781993",
     "url": "/Portfolio-Website/static/media/mount douglas.5ef7bbd1.jpg"
   },
   {
     "revision": "6ef875491918d171a01533da193ab2a6",
     "url": "/Portfolio-Website/static/media/myself.6ef87549.jpg"
+  },
+  {
+    "revision": "a00fc22f3ef0d5afa8fcea94618f3445",
+    "url": "/Portfolio-Website/static/media/search.a00fc22f.png"
   },
   {
     "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
